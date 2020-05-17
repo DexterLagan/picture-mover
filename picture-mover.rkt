@@ -9,7 +9,7 @@
 
 ;;; consts
 
-(define *version* "1.0")
+(define *version* "1.3")
 (define *app-name* (string-append "Picture Mover v" *version*))
 
 ;;; versions
