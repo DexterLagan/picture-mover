@@ -9,11 +9,13 @@
 
 ;;; consts
 
-(define *version* "1.3")
+(define *version* "1.4")
 (define *app-name* (string-append "Picture Mover v" *version*))
+(define *config-filename* "picture-mover.conf")
 
 ;;; versions
 
+; v1.4 - added support for reading search path from config file;
 ; v1.3 - added support for Windows Camera Roll and folder selection;
 ; v1.2 - added support for automatically renaming duplicate folders;
 ; v1.1 - improved error handling;
@@ -78,13 +80,15 @@
 
 ;;; main
 
-;; ask user or use Camera Roll as default
-(define camera-roll-path (build-path (find-system-path 'home-dir) "Pictures\\Camera Roll"))
-(define search-path  
-  (if (eq? 'yes (confirm? "Use Windows Camera Roll?"))
-      camera-roll-path
-      (get-directory "Please select pictures folder: " #f camera-roll-path)))
-(unless search-path (exit 0))
+; read search path from config file
+(define search-path (file->string *config-filename*))
+(unless search-path
+  (msg-box "Config file not found.")
+  (exit 0))
+
+(unless (directory-exists? search-path)
+  (msg-box "Search path folder does not exist.")
+  (exit 0))
 
 (define pic-folders (map (λ (path) (build-path search-path path))
                          (directory-list search-path)))
@@ -95,7 +99,7 @@
 ; apply folder date naming convention
 (for-each rename-folder pic-folders)
 
-(msg-box "All done!")
+(msg-box "All done!  ")
 
 
 ; EOF
