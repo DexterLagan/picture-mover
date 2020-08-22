@@ -34,7 +34,7 @@
 ;; creates an 'Originals' folder inside a path if it doesn't exist
 (define (create-originals-folder path)
   (let ((originals-folder (build-path path "Originals")))
-    (when (not (directory-exists? originals-folder))
+    (unless (directory-exists? originals-folder)
       (make-directory originals-folder))))
 
 ;; moves all files in a folder to its 'Originals' sub-folder
@@ -53,7 +53,7 @@
 (define (move-pictures-to-originals path)
   (when (directory-exists? path)
     (let ((originals-folder (build-path path "Originals")))
-      (when (not (directory-exists? originals-folder))
+      (unless (directory-exists? originals-folder)
         (begin (create-originals-folder path)
                (move-to-originals path))))))
 
@@ -67,7 +67,7 @@
                                      path-string
                                      remove-dashes-from-first)))
       ; quick and dirty way to automatically rename folder if date exists
-      (when (not (string=? (path->string path) new-path))
+      (unless (string=? (path->string path) new-path)
         (when (directory-exists? new-path)
           (set! new-path (string-append new-path "a")))
         (when (directory-exists? new-path)
