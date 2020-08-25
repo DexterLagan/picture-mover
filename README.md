@@ -9,11 +9,11 @@
   Picture-mover will create an 'Originals' sub-folder in each directory, and move all pictures in each. Folder dates are also automatically renamed to conform the following format: YYYYMMDD.<br>
   The resulting folder structure will be:<br>
 /20200821<br>
-  |_ Originals -> pics<br>
+&nbsp;&nbsp;&nbsp;|_ Originals -> pics<br>
 /20200821<br>
-  |_ Originals -> pics<br>
-  /20200821<br>
-  |_ Originals -> pics<br>
+&nbsp;&nbsp;&nbsp;|_ Originals -> pics<br>
+/20200821<br>
+&nbsp;&nbsp;&nbsp;|_ Originals -> pics<br>
 <br>  
 Detailed Process Overview:<br>
 1) reads the source path from a config file of the same name (picture-mover.conf);
