@@ -1,12 +1,13 @@
 # picture-mover
   A small app that automatically organizes imported camera pictures.<br>
-
+<br>
   Say your pictures folder is organized this way:<br>
 /2020-08-21 -> pics<br>
 /2020-08-22 -> pics<br>
 /2020-08-23 -> pics<br>
 <br>
   Picture-mover will create an 'Originals' sub-folder in each directory, and move all pictures in each. Folder dates are also automatically renamed to conform the following format: YYYYMMDD.<br>
+  <br>
   The resulting folder structure will be:<br>
 /20200821<br>
 &nbsp;&nbsp;&nbsp;|_ Originals -> pics<br>
@@ -21,6 +22,7 @@ Detailed Process Overview:<br>
 3) for each folder,<br>
 &nbsp;&nbsp;a) if no Originals folder exists, create it;<br>
 &nbsp;&nbsp;b) move all files to the ./Originals folder.<br>
+<br>
 <br>
 Cheers,<br>
 <br>
