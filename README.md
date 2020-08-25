@@ -1,6 +1,6 @@
 # picture-mover
   A small app that automatically organizes imported camera pictures.<br>
-<br>
+
 <h3>Basic Process</h3>
 <br>
   Say your pictures folder is organized this way:<br>
@@ -17,7 +17,7 @@
 &nbsp;&nbsp;&nbsp;|_ Originals -> pics<br>
 /20200821<br>
 &nbsp;&nbsp;&nbsp;|_ Originals -> pics<br>
-<br>  
+<br>
 <h3>Detailed Process Overview:</h3><br>
 1) reads the source path from a config file of the same name (picture-mover.conf);
 2) make a list of all folders in the source folder;
