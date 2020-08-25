@@ -18,10 +18,10 @@
 Detailed Process Overview:<br>
 1) reads the source path from a config file of the same name (picture-mover.conf);
 2) make a list of all folders in the source folder;
-3) for each folder,
-   a) if no Originals folder exists, create it;
-   b) move all files to the ./Originals folder.
-
+3) for each folder,<br>
+&nbsp;&nbsp;a) if no Originals folder exists, create it;<br>
+&nbsp;&nbsp;b) move all files to the ./Originals folder.<br>
+<br>
 Cheers,<br>
 <br>
 Dexter<br>
