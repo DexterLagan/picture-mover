@@ -1,7 +1,7 @@
 # picture-mover
   A small app that automatically organizes imported camera pictures.<br>
 
-<h3>Basic Process</h3>
+## Basic Process
 
   Say your pictures folder is organized this way:<br>
 /2020-08-21 -> pics<br>
@@ -24,8 +24,11 @@
 3) for each folder,<br>
 &nbsp;&nbsp;a) if no Originals folder exists, create it;<br>
 &nbsp;&nbsp;b) move all files to the ./Originals folder.<br>
-<br>
-<br>
-Cheers,<br>
-<br>
-Dexter<br>
+
+## Download
+
+Download the latest release for Windows x64 [HERE](https://github.com/DexterLagan/picture-mover/releases).
+
+## License
+
+Delete-duplicate-pics is free software; see [LICENSE](https://github.com/DexterLagan/picture-mover/blob/master/LICENSE) for more details.
