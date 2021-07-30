@@ -17,8 +17,9 @@
 &nbsp;&nbsp;&nbsp;|_ Originals -> pics<br>
 /20200821<br>
 &nbsp;&nbsp;&nbsp;|_ Originals -> pics<br>
-<br>
-<h3>Detailed Process Overview</h3>
+
+### Detailed Process Overview
+
 1) reads the source path from a config file of the same name (picture-mover.conf);
 2) make a list of all folders in the source folder;
 3) for each folder,<br>
